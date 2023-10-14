@@ -127,3 +127,17 @@ var tl3 = gsap.timeline({
 tl3.to(".page4 > h1", {
   top: `-50%`,
 });
+
+var tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: `.page7`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `.main`,
+    pin: true,
+  },
+});
+
+tl4.to(".page7-center", {
+  top: `-50%`,
+});
