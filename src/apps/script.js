@@ -128,6 +128,20 @@ tl3.to(".page4 > h1", {
   top: `-50%`,
 });
 
+var tl3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: `.page5`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `.main`,
+    pin: true,
+  },
+});
+
+tl3.to(".page5 > h1", {
+  top: `-50%`,
+});
+
 var tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: `.page7`,
@@ -441,3 +455,212 @@ https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860
   });
 }
 canvas();
+
+var tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: `.page22`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `.main`,
+    pin: true,
+  },
+});
+
+tl4.to(".page22-center", {
+  top: `-50%`,
+});
+
+//  Initialize Swiper
+let swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  loop: true,
+});
+
+// canvas 2
+function canvas1() {
+  const canvas = document.querySelector(".page35>canvas");
+  const context = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+
+  function files(index) {
+    var data = `
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/eye_tracking_on__ln11reqs6mi6_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/eye_tracking_on__ln11reqs6mi6_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/eye_tracking_on__ln11reqs6mi6_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/eye_tracking_on__ln11reqs6mi6_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/eye_tracking_on__ln11reqs6mi6_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/eye_tracking_off__fx6m2dj3mlqq_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/eye_tracking_on__ln11reqs6mi6_large.jpg
+`;
+    return data.split("\n")[index];
+  }
+
+  const frameCount = 2;
+
+  const images = [];
+  const imageSeq = {
+    frame: 1,
+  };
+
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
+
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: 0.15,
+      trigger: `.page35`,
+      //   set start end according to preference
+      start: `top top`,
+      end: `80% top`,
+      scroller: `.main`,
+    },
+    onUpdate: render,
+  });
+
+  images[1].onload = render;
+
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.max(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+    trigger: ".page35",
+    pin: true,
+    // markers:true,
+    scroller: `.main`,
+    //   set start end according to preference
+    start: `top top`,
+    end: `80% top`,
+  });
+}
+canvas1();
+
+// canvas3
+
+// canvas 2
+function canvas2() {
+  const canvas = document.querySelector(".page37>canvas");
+  const context = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+
+  function files(index) {
+    var data = `
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_off__cfzcmow4c3f6_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_video__b8xghearfs76_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_tracking__dssyfpe9tc66_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_mapping__3hn0pwmp7v6e_large.jpg
+    https://www.apple.com/v/apple-vision-pro/a/images/overview/technology/features/sensors_all__dp0a8e4y4u4i_large.jpg
+`;
+    return data.split("\n")[index];
+  }
+
+  const frameCount = 5;
+
+  const images = [];
+  const imageSeq = {
+    frame: 1,
+  };
+
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
+
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: 0.15,
+      trigger: `.page37`,
+      //   set start end according to preference
+      start: `top top`,
+      end: `80% top`,
+      scroller: `.main`,
+    },
+    onUpdate: render,
+  });
+
+  images[1].onload = render;
+
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.max(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+    trigger: ".page37",
+    pin: true,
+    // markers:true,
+    scroller: `.main`,
+    //   set start end according to preference
+    start: `top top`,
+    end: `80% top`,
+  });
+}
+canvas2();

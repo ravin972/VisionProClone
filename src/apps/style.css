@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400&family=Open+Sans&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Gabarito', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
 }
 
 html,
@@ -338,6 +340,13 @@ body {
     color: #fff;
     background-color: #ff5100;
     margin-top: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page8-right button:hover {
+    background-color: #ff5100c7;
 }
 
 .page9 {
@@ -419,6 +428,13 @@ body {
     color: #fff;
     background-color: #ff5100;
     margin-top: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page10-right button:hover {
+    background-color: #ff5100c7;
 }
 
 .page11 {
@@ -481,7 +497,7 @@ body {
     transform: translateY(-50%);
     left: 10%;
     font-size: 1.3vw;
-    font-weight: 500;
+    font-weight: 400;
     color: #4d4d4d;
     z-index: 99;
     position: absolute;
@@ -489,7 +505,7 @@ body {
 
 .page13>h1>span {
     color: #2c2b2b;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 900;
 }
 
@@ -514,7 +530,7 @@ body {
 
 .page14>h1>span {
     color: #2c2b2b;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 900;
 }
 
@@ -539,7 +555,7 @@ body {
 
 .page15>h1>span {
     color: #2c2b2b;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 900;
 }
 
@@ -564,7 +580,7 @@ body {
 
 .page16>h1>span {
     color: #2c2b2b;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 900;
 }
 
@@ -589,7 +605,7 @@ body {
 
 .page17>h1>span {
     color: #2c2b2b;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 900;
 }
 
@@ -614,7 +630,7 @@ body {
 
 .page18>h1>span {
     color: #2c2b2b;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 900;
 }
 
@@ -666,17 +682,738 @@ body {
     width: 100vw;
     object-fit: cover;
 }
-.page21{
+
+.page21 {
     position: relative;
-    height: 50vh;
+    height: 180vh;
     width: 100vw;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
 }
-.page21 h1{
+
+.page21 h1 {
     width: 38rem;
+    position: absolute;
+    bottom: 0%;
+    top: 10rem;
     font-size: 1.2rem;
+    color: #8D8C90;
+}
+
+.page21 h1 span {
+    color: #161616;
+    font-weight: bold;
+}
+
+.page21 img {
+    width: 55rem;
+    position: absolute;
+    bottom: 0%;
+    top: 28rem;
+}
+
+.page21 button {
+    position: absolute;
+    font-size: 2rem;
+    bottom: 8%;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background-color: #ff5100;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page21 button:hover {
+    cursor: pointer;
+    background-color: #ff823d;
+    color: #fff;
+}
+
+.page22 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.page22>video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page22-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 2vw;
+}
+
+.page22-center>h5 {
+    color: #fff;
+    font-weight: bolder;
+}
+
+.page23 {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+}
+
+.page23-left {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+}
+
+.page23-left h1 {
+    position: absolute;
+    font-size: 1.8rem;
+    white-space: nowrap;
+    font-weight: bolder;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+.page23-right {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.1rem;
+}
+
+.page23-right p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8a7f7f;
+    line-height: 1.8rem;
+    width: 35rem;
+    margin-top: -1rem;
+}
+
+.page24 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    height: 130vh;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.page24-left {
+    position: relative;
+    height: 85%;
+    width: 45%;
+    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/visionos/scaling_ui__gosi0305um2y_large.jpg);
+    background-size: cover;
+}
+
+.page24-right {
+    height: 85%;
+    width: 45%;
+    position: relative;
+    background-size: cover;
+    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/visionos/spatial_interaction__br11mf88bzxy_large.jpg);
+}
+
+.page25 {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+}
+
+.page25-left {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+}
+
+.page25-left h1 {
+    position: absolute;
+    font-size: 1.8rem;
+    white-space: nowrap;
+    font-weight: bolder;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+}
+
+.page25-right {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.1rem;
+}
+
+.page25-right p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8a7f7f;
+    line-height: 1.8rem;
+    width: 35rem;
+    margin-top: -4rem;
+}
+
+/* Swiper container stylng */
+.page26 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95vw;
+    height: 130vh;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    user-select: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    outline: none;
+    top: 50%;
+    color: #dadada;
+    user-select: none;
+}
+
+.page27 {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+}
+
+.page27-left {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+}
+
+.page27-left h1 {
+    position: absolute;
+    font-size: 1.8rem;
+    white-space: nowrap;
+    font-weight: bolder;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+}
+
+.page27-right {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.1rem;
+}
+
+.page27-right p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8a7f7f;
+    line-height: 1.8rem;
+    width: 35rem;
+    margin-top: -3rem;
+}
+
+.page28 {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 140vh;
+    background-color: #FFFEFE;
+}
+
+.page28-center {
+    position: absolute;
+    top: 5rem;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.page28-center img {
+    position: absolute;
+    max-width: 100%;
+}
+
+.page29 {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+}
+
+.page29-left {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+.page29-left h1 {
+    position: absolute;
+    font-size: 2rem;
+    white-space: nowrap;
+    font-weight: bolder;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+.page29-right {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.1rem;
+}
+
+.page29-right p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8a7f7f;
+    line-height: 1.8rem;
+    width: 35rem;
+    margin-top: -7.5rem;
+}
+
+.page29-right button {
+    padding: 1rem 3.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.12rem;
+    font-weight: 900;
+    color: #fff;
+    background-color: #ff5100;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page29-right button:hover {
+    background-color: #ff5100c7;
+}
+
+.page30 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.page30-center {
+    display: flex;
+    padding: 6rem 1.2rem;
+    color: #F4F5F6;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page30-center h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.page30-center h1 {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.page30-center p span {
+    color: #fff;
+}
+
+.page30-center p {
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: 600;
+    color: #67666A;
+}
+
+.page31 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.page31 img {
+    position: absolute;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.page32 {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.page32 h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFFEFE;
+    line-height: 4;
+}
+
+.page32 p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #87868A;
+    width: 45%;
+    font-weight: 600;
+}
+
+.page32 p span {
+    color: #fff;
+}
+
+.page33 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.page33 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page33-center {
+    position: absolute;
+    height: 50vh;
+    width: 30vw;
+    bottom: 1rem;
+    right: 13rem;
+    color: #fff;
+    z-index: 9;
+}
+
+.page33-center h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFFEFE;
+}
+
+.page33-center p {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #87868A;
+}
+
+.page33-center p span {
+    color: #fff;
+}
+
+.page34 {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    background-color: #000;
+}
+
+.page35 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 0%;
+    background-color: #000;
+}
+
+.page35>canvas {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80vw;
+    max-height: 100vh;
+    /* z-index: 99; */
+}
+
+.page36 {
+    position: relative;
+    height: 45vh;
+    width: 100vw;
+    background-color: #000;
+}
+
+.page36-center {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page36-center h1 {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    color: #F5F5F7;
+    white-space: nowrap;
+}
+
+.page36-center p {
+    width: 40%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #87868A;
+    font-weight: 100;
+}
+
+.page36-center p span {
+    color: #FFFEFE;
+    font-weight: 600;
+}
+
+.page37 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 0%;
+    background-color: #000;
+}
+
+.page37>canvas {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80vw;
+    max-height: 100vh;
+    /* z-index: 99; */
+}
+
+.page38 {
+    position: relative;
+    height: 45vh;
+    width: 100vw;
+    background-color: #000;
+}
+
+.page38-center {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page38-center h1 {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    color: #F5F5F7;
+    white-space: nowrap;
+}
+
+.page38-center p {
+    width: 40%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #87868A;
+    font-weight: 100;
+}
+
+.page38-center p span {
+    color: #FFFEFE;
+    font-weight: 600;
+}
+
+.page39 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+}
+
+.page39 img {
+    object-fit: cover;
+    width: 80rem;
+    margin: 10% 3%;
+    opacity: 0.8;
+}
+
+.page40 {
+    position: relative;
+    height: 130vh;
+    width: 100vw;
+    background-color: #000;
+}
+
+.page40-center {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3.5rem;
+}
+
+.page40-center h1 {
+    margin-top: 1.5rem;
+    font-size: 2.9rem;
+    color: #F5F5F7;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.page40-center p {
+    width: 50%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #87868A;
+    font-weight: 100;
+}
+
+.page40-center p span {
+    color: #FFFEFE;
+    font-weight: 600;
+}
+
+.page40-center button {
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 500;
+    box-shadow: 0 8px 6px rgb(239, 239, 239, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page40-center button:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.page41 {
+    position: relative;
+    height: 130vh;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.page41-center {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8rem;
+}
+
+.page41-center svg {
+    width: 5rem;
+    height: 5rem;
+}
+
+.page41-center h5 {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    color: #252424;
+}
+
+.page41-center h1 {
+    margin-top: 1rem;
+    font-size: 5rem;
+    color: #2d2d2e;
+    font-weight: 800;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.page41-center p {
+    width: 55%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: #656469;
+    font-weight: 100;
+}
+
+.page41-center p span {
+    color: #000000;
+    font-weight: 600;
+}
+
+.page41-center button {
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 500;
+    background-color: #ff5100;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page41-center button:hover {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #000000;
 }
