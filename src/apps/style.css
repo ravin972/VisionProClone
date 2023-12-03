@@ -7,7 +7,7 @@
     box-sizing: border-box;
     font-family: 'Gabarito', sans-serif;
     /* font-family: 'Open Sans', sans-serif; */
-    background: #000;
+
 }
 
 *::selection {
@@ -24,6 +24,7 @@ body {
 .main {
     position: relative;
     overflow: hidden;
+    background: #000;
 }
 
 .page1 {
